@@ -9,7 +9,7 @@ app.get('/',function(req,res){
 
 
 router.get('/Dad', function(req, res, next) {
-  res.render('index', { title: 'Dad' });
+  res.render('index.html', { title: 'Dad' });
 });
 
 router.get('/Dee', function(req, res, next) {
