@@ -11,22 +11,39 @@
 </head>
 
 <body>
-  <p>This worked out well</p>
-  <div class>
-    <input type="text" id="Wish" value="">
-    <button type="button" name="button" onclick="AddWish()">Add A Wish</button>
+  <p id = "wishes">This worked out well</p>
+  <canvas id="myCanvas" width="800" height="500" style="border:1px solid #000000;">
+  Your browser does not support the HTML5 canvas tag.
+  </canvas>
 
+  <div>
+    <button type="button" name="button" onclick="AddWish()">Add A Wish</button>
+    <input type="text" id="Wish" value="" style = "height: 40px;">
   </div>
-    <button type="button" name="button" onclick="Fire()">Happy New Years</button>
+
+  <button type="button" name="button" onclick="Fire()">Happy New Years</button>
 </body>
 
 <script type="text/javascript">
-  function AddWish(){
+  var MongoClient = require('mongodb').MongoClient;
+  var uri = "mongodb://quinn:2018@goals-shard-00-00-9yjnu.mongodb.net:27017,goals-shard-00-01-9yjnu.mongodb.net:27017,goals-shard-00-02-9yjnu.mongodb.net:27017/test?ssl=true&replicaSet=goals-shard-0&authSource=admin&retryWrites=true";
 
+
+
+
+  function AddWish(){
+    MongoClient.connect(uri, function(err, client) {
+       const collection = client.db("goals").collection("nextYear");
+
+       client.close();
+    });
   }
 
   function Fire(){
+    const collection = client.db("goals").collection("nextYear");
+    document.getElementById(wishes).innerHTML = collection;
 
+    client.close();
   }
 
 </script>
