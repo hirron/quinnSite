@@ -29,7 +29,6 @@ var uri = "mongodb://quinn:2018@goals-shard-00-00-9yjnu.mongodb.net:27017,goals-
 
 
 router.get('/goals', function(req, res, next) {
-   const collection;
    var message = "success";
 
   MongoClient.connect(uri, function(err, client) => {
