@@ -6,13 +6,16 @@
   body {background-color: #000066;
         color: white;
         }
+  button {
+        height: 40px;
+        }
 </style>
 
 </head>
 
 <body>
   <p id = "wishes">This worked out well</p>
-  <canvas id="myCanvas" width="800" height="500" style="border:1px solid #000000;">
+  <canvas id="myCanvas" width="80%" height="500" style="border:1px solid #000000;">
   Your browser does not support the HTML5 canvas tag.
   </canvas>
 
@@ -21,29 +24,23 @@
     <input type="text" id="Wish" value="" style = "height: 40px;">
   </div>
 
-  <button type="button" name="button" onclick="Fire()">Happy New Years</button>
+  <button type="button" name="button" onclick="Fireworks()">Happy New Years</button>
 </body>
 
 <script type="text/javascript">
-  var MongoClient = require('mongodb').MongoClient;
-  var uri = "mongodb://quinn:2018@goals-shard-00-00-9yjnu.mongodb.net:27017,goals-shard-00-01-9yjnu.mongodb.net:27017,goals-shard-00-02-9yjnu.mongodb.net:27017/test?ssl=true&replicaSet=goals-shard-0&authSource=admin&retryWrites=true";
+function AddWish(){
 
+}
 
-
-
-  function AddWish(){
-    MongoClient.connect(uri, function(err, client) {
-       const collection = client.db("goals").collection("nextYear");
-
-       client.close();
-    });
-  }
-
-  function Fire(){
-    const collection = client.db("goals").collection("nextYear");
-    document.getElementById(wishes).innerHTML = collection;
-
-    client.close();
-  }
+function Fireworks(){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("wishes").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "https://www.google.com/", true);
+  xhttp.send();
+}
 
 </script>
