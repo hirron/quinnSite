@@ -37,7 +37,7 @@ router.get('/goals', function(req, res, next) {
          message = "fail"
          res.status(404).send(err);
      }
-     collection = client.db("goals").collection("nextYear");
+     message = client.db("goals").collection("nextYear").find();
 
      res.status(200).send(message);
      client.close();

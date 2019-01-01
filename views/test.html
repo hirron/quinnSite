@@ -49,6 +49,7 @@ function AddWish(){
 function Fireworks(){
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
+    alert(http.responseText);
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("wishes").innerHTML = this.responseText;
     }
