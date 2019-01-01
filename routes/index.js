@@ -31,7 +31,7 @@ var uri = "mongodb://quinn:2018@goals-shard-00-00-9yjnu.mongodb.net:27017,goals-
 router.get('/goals', function(req, res, next) {
    var message = "success";
 
-  MongoClient.connect(uri, (err, client) => {
+  MongoClient.connect(uri,  { useNewUrlParser: true }, (err, client) => {
    message = "made it to connect";
   if(err) {
          console.log(err);
