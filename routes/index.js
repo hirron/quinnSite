@@ -30,13 +30,18 @@ var uri = "mongodb://quinn:2018@goals-shard-00-00-9yjnu.mongodb.net:27017,goals-
 
 router.get('/goals', function(req, res, next) {
    const collection;
+   var message = "success";
   MongoClient.connect(uri, function(err, client) {
 
+  if(err) {
+         console.log(err);
+         message = "fail"
+     }
      const collection = client.db("goals").collection("nextYear");
 
      client.close();
   });
-   res.status(200).send("collection");
+   res.status(200).send(message);
 });
 
 router.post('/goals', function(req, res, next) {
