@@ -36,7 +36,7 @@ router.get('/goals', function(req, res, next) {
   if(err) {
          console.log(err);
          message = "fail"
-         res.status(404).send(message);
+         res.status(404).send('An error occurred connecting to MongoDB: ', err);
      }
      message = client.db("goals").collection("nextYear");
 
