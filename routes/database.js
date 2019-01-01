@@ -24,3 +24,5 @@ router.post('/goals', function(req, res, next) {
      client.close();
   });
 });
+
+module.exports = router;
