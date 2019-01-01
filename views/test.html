@@ -47,15 +47,15 @@ function AddWish(){
 }
 
 function Fireworks(){
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
+  var http = new XMLHttpRequest();
+  http.onreadystatechange = function() {
     alert(http.responseText);
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("wishes").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "https://patersonchrismas.azurewebsites.net/goals", true);
-  xhttp.send();
+  http.open("GET", "https://patersonchrismas.azurewebsites.net/goals", true);
+  http.send();
 }
 
 </script>
