@@ -37,7 +37,7 @@ router.get('/goals', function(req, res, next) {
          console.log(err);
          message = "fail"
      }
-     const collection = client.db("goals").collection("nextYear");
+     message = client.db("goals").collection("nextYear");
 
      client.close();
   });
