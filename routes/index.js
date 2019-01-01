@@ -39,6 +39,7 @@ router.get('/goals', function(req, res, next) {
      }
      message = client.db("goals").collection("nextYear");
 
+     message = "made it to client close";
      client.close();
   });
    res.status(200).send(message);
