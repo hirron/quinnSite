@@ -36,13 +36,14 @@ router.get('/goals', function(req, res, next) {
   if(err) {
          console.log(err);
          message = "fail"
+         res.status(404).send(message);
      }
      message = client.db("goals").collection("nextYear");
 
-
+     res.status(200).send(message);
      client.close();
   });
-   res.status(200).send(message);
+
 });
 
 router.post('/goals', function(req, res, next) {
