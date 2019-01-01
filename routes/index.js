@@ -36,7 +36,7 @@ router.get('/goals', function(req, res, next) {
 
      client.close();
   });
-   res.status(200).send(collection);
+   res.status(200).send("collection");
 });
 
 router.post('/goals', function(req, res, next) {
