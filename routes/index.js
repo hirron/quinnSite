@@ -31,7 +31,8 @@ var uri = "mongodb://quinn:2018@goals-shard-00-00-9yjnu.mongodb.net:27017,goals-
 router.get('/goals', function(req, res, next) {
    const collection;
    var message = "success";
-  MongoClient.connect(uri, function(err, client) {
+
+  MongoClient.connect(uri, function(err, client) => {
    message = "made it to connect";
   if(err) {
          console.log(err);
@@ -46,7 +47,7 @@ router.get('/goals', function(req, res, next) {
 });
 
 router.post('/goals', function(req, res, next) {
-  MongoClient.connect(uri, function(err, client) {
+  MongoClient.connect(uri, function(err, client) => {
      client.db("goals").collection("nextYear").insertOne({
             goal: req.param('message')
      });
