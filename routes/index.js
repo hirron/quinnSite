@@ -37,7 +37,7 @@ router.get('/goals', function(req, res, next) {
          message = "fail"
          res.status(404).send(err);
      }
-     message = JSON.stringify(client.db("goals").collection("buzz"));
+     collection = client.db("goals").collection("nextYear");
 
      res.status(200).send(message);
      client.close();
@@ -47,6 +47,13 @@ router.get('/goals', function(req, res, next) {
 
 router.post('/goals', function(req, res, next) {
   MongoClient.connect(uri, (err, client) => {
+
+    if(err) {
+           console.log(err);
+           message = "fail"
+           res.status(404).send(err);
+       }
+
      client.db("goals").collection("nextYear").insertOne({
             goal: req.param('message')
      });

@@ -22,7 +22,7 @@
 
   <div>
     <button type="button" name="button" onclick="AddWish()">Add A Wish</button>
-    <input type="text" id="Wish" value="" style = "height: 40px;">
+    <input type="text" id="Wish" style = "height: 40px;">
   </div>
 
   <button type="button" name="button" onclick="Fireworks()">Happy New Years</button>
@@ -30,7 +30,20 @@
 
 <script type="text/javascript">
 function AddWish(){
+  var http = new XMLHttpRequest();
+  var url = 'https://patersonchrismas.azurewebsites.net/goals';
+  var params = 'message='+document.getElementById(Wish).value;
+  http.open('POST', url, true);
 
+  //Send the proper header information along with the request
+  http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+  http.onreadystatechange = function() {//Call a function when the state changes.
+      if(http.readyState == 4 && http.status == 200) {
+          alert(http.responseText);
+      }
+  }
+  http.send(params);
 }
 
 function Fireworks(){
