@@ -32,14 +32,14 @@ router.get('/goals', function(req, res, next) {
    const collection;
    var message = "success";
   MongoClient.connect(uri, function(err, client) {
-
+   message = "made it to connect";
   if(err) {
          console.log(err);
          message = "fail"
      }
      message = client.db("goals").collection("nextYear");
 
-     message = "made it to client close";
+
      client.close();
   });
    res.status(200).send(message);
