@@ -24,16 +24,3 @@ router.post('/goals', function(req, res, next) {
      client.close();
   });
 });
-
-
-
-
-
-
-
-
-
-const collection = client.db("goals").collection("nextYear");
-document.getElementById(wishes).innerHTML = collection;
-
-client.close();
