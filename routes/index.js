@@ -28,10 +28,9 @@ router.get('/Grandma', function(req, res, next) {
 var uri = "mongodb+srv://quinn:2018@goals-9yjnu.mongodb.net/test?retryWrites=true"
 
 router.get('/goals', function(req, res, next) {
-   var message = "success";
 
   MongoClient.connect(uri,  { useNewUrlParser: true }, (err, client) => {
-   message = "made it to connect";
+   var message = "made it to connect";
   if(err) {
          console.log(err);
          message = "fail"

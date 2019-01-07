@@ -2,6 +2,8 @@
 
 <head>
 
+ <title>Happy New Years</title>
+
 <style>
   body {background-color: #000066;
         color: white;
@@ -48,13 +50,15 @@ function AddWish(){
 
 function Fireworks(){
   var http = new XMLHttpRequest();
+  http.open("GET", "https://patersonchrismas.azurewebsites.net/goals", true);
+
   http.onreadystatechange = function() {
     alert(http.responseText);
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("wishes").innerHTML = this.responseText;
     }
   };
-  http.open("GET", "https://patersonchrismas.azurewebsites.net/goals", true);
+  
   http.send();
 }
 
