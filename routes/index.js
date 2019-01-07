@@ -38,8 +38,8 @@ router.get('/goals', function(req, res, next) {
      }
 
      client.db("goals").collection("nextYear").find().toArray(function(err, docs) {
-        message = docs
-      });;
+        message = docs;
+      });
   //   message = JSON.stringify(client.db("goals").collection("nextYear").find());
 
      res.status(200).send(message);
