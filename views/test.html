@@ -17,20 +17,24 @@
 </head>
 
 <body>
-  <p id = "wishes">This worked out well</p>
+  <p id = "wishes"></p>
   <canvas id="myCanvas" width="800px" height="500" style="border:1px solid #000000;">
   Your browser does not support the HTML5 canvas tag.
   </canvas>
-
+  <p id = "conStatus"></p>
   <div>
     <button type="button" name="button" onclick="AddWish()">Add A Wish</button>
     <input type="text" id="wish" style = "height: 40px;">
   </div>
 
   <button type="button" name="button" onclick="Fireworks()">Happy New Years</button>
+  <button type="button" name="button" onclick="FireworksCont()">Next Goal</button>
 </body>
 
 <script type="text/javascript">
+var GoalList;
+
+
 function AddWish(){
   var http = new XMLHttpRequest();
   var url = 'https://patersonchrismas.azurewebsites.net/goals';
@@ -42,7 +46,7 @@ function AddWish(){
 
   http.onreadystatechange = function() {//Call a function when the state changes.
       if(http.readyState == 4 && http.status == 200) {
-          alert(http.responseText);
+          document.getElementById("conStatus").innerHTML = "Successfully submitted your goal";
       }
   }
   http.send(params);
@@ -53,13 +57,19 @@ function Fireworks(){
   http.open("GET", "https://patersonchrismas.azurewebsites.net/goals", true);
 
   http.onreadystatechange = function() {
-    alert(http.responseText);
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("wishes").innerHTML = this.responseText;
+      GoalList = this.responseText;
+      document.getElementById("wishes").innerHTML = GoalList;
+
+      document.getElementById("conStatus").innerHTML = "More Goals, just press the button";
     }
   };
-  
+
   http.send();
+}
+
+function FireworksCont(){
+
 }
 
 </script>
