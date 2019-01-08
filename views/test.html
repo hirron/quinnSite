@@ -32,6 +32,7 @@
 
 <script type="text/javascript">
 var GoalList;
+var GoalCount = 1;
 
 
 function AddWish(){
@@ -68,7 +69,8 @@ function Fireworks(){
 }
 
 function FireworksCont(){
-
+  document.getElementById("wishes").innerHTML = GoalList[GoalCount].goal;
+  GoalCount = (GoalCount+1)%(GoalList.length-1);
 }
 
 </script>
