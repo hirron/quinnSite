@@ -83,7 +83,7 @@ function FireworksCont(){
 
   document.getElementById("conStatus").innerHTML = "";
   document.getElementById("wishes").innerHTML = GoalList[GoalCount].goal;
-  GoalCount = (GoalCount+1)%(GoalList.length-1);
+  GoalCount = (GoalCount+1)%(GoalList.length);
   GenerateFirework();
 }
 
