@@ -30,7 +30,7 @@ var uri = "mongodb+srv://quinn:2018@goals-9yjnu.mongodb.net/test?retryWrites=tru
 router.get('/goals', function(req, res, next) {
 
   MongoClient.connect(uri,  { useNewUrlParser: true }, (err, client) => {
-   var message = "made it to connect";
+
   if(err) {
          console.log(err);
          message = "fail"
@@ -40,8 +40,7 @@ router.get('/goals', function(req, res, next) {
      client.db("goals").collection("nextYear").find().toArray(function(err, docs) {
        console.log(err);
        console.log(docs);
-        message = docs[1];
-        res.status(200).send(message);
+        res.status(200).send(docs[1]);
       });
   //   message = JSON.stringify(client.db("goals").collection("nextYear").find());
 
