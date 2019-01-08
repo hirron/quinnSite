@@ -12,21 +12,29 @@
         height: 40px;
         margin-top: 5px;
         }
+
+  div{
+    width:  900px;
+    align: center;
+  }
 </style>
 
 </head>
 
 <body>
-  <p id = "wishes"></p>
-  <canvas id="myCanvas" width="800px" height="500" style="border:1px solid #000000;">
-  </canvas>
+  <div>
+    <p id = "wishes"></p>
+    <canvas id="myCanvas" width="800px" height="500" style="border:1px solid #000000;">
+    </canvas>
+  </div>
+
   <p id = "conStatus"></p>
   <div>
-    <button type="button" name="button" onclick="AddWish()">Add A Wish</button>
+    <button type="button" name="button" onclick="AddWish()" style="align:left">Add A Wish</button>
     <input type="text" id="wish" style = "height: 40px;">
   </div>
 
-  <button type="button" name="button" onclick="Fireworks()">Happy New Years</button>
+  <button type="button" name="button" onclick="Fireworks()" style="align:left" >Happy New Years</button>
   <button type="button" name="button" onclick="FireworksCont()" id = "next" style="visibility: hidden;">Next Goal</button>
 </body>
 
