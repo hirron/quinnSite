@@ -41,7 +41,7 @@ router.get('/goals', function(req, res, next) {
        console.log(err);
        console.log(docs);
        console.log("----\n" + console.log(docs[1]));
-        res.status(200).send(docs[1]);
+        res.status(200).send(JSON.Parse(docs[1]).goals);
       });
   //   message = JSON.stringify(client.db("goals").collection("nextYear").find());
      client.close();
