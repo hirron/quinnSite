@@ -58,7 +58,7 @@ function Fireworks(){
   http.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       GoalList = this.responseText;
-      document.getElementById("wishes").innerHTML = GoalList;
+      document.getElementById("wishes").innerHTML = GoalList[1];
 
       document.getElementById("conStatus").innerHTML = "More Goals, just press the button";
     }
