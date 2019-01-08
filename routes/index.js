@@ -41,9 +41,7 @@ router.get('/goals', function(req, res, next) {
        console.log(err);
        console.log(docs);
        console.log("----\n" + console.log(docs[1]));
-       var responsearray = {
-         result: docs
-         }
+       var responsearray = Object.assign({}, docs);
         res.status(200).send(responsearray);
       });
   //   message = JSON.stringify(client.db("goals").collection("nextYear").find());
