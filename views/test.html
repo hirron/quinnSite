@@ -30,7 +30,7 @@
 
   <p id = "conStatus" style="margin-top: 100px"></p>
   <div>
-    <button type="button" name="button" onclick="AddWish()" style="align:left">Add A Wish</button>
+    <button type="button" name="button" onclick="AddWish()" style="align:left">Add A Goal</button>
     <input type="text" id="wish" style = "height: 40px;">
   </div>
 
@@ -62,7 +62,7 @@ function AddWish(){
 
 function Fireworks(){
   var http = new XMLHttpRequest();
-  document.getElementById("conStatus").innerHTML = "Finding out everyones wishes, just wait...";
+  document.getElementById("conStatus").innerHTML = "Finding out everyones goals, just wait...";
   http.open("GET", "https://patersonchrismas.azurewebsites.net/goals", true);
 
   http.onreadystatechange = function() {
@@ -92,7 +92,7 @@ function GenerateFirework(){
   var ctx = c.getContext("2d");
 
   ctx.beginPath();
-  ctx.arc(Math.random()*800, Math.random()*500, Math.random()*100, 0, 2 * Math.PI);
+  ctx.arc(Math.random()*800, Math.random()*500, Math.random()*50, 0, 2 * Math.PI);
   ctx.fillStyle = "red";
 
   var randVal = Math.random()
