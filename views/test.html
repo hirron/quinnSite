@@ -19,7 +19,6 @@
 <body>
   <p id = "wishes"></p>
   <canvas id="myCanvas" width="800px" height="500" style="border:1px solid #000000;">
-  Your browser does not support the HTML5 canvas tag.
   </canvas>
   <p id = "conStatus"></p>
   <div>
@@ -58,7 +57,7 @@ function Fireworks(){
 
   http.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      GoalList = this.responseText;
+      GoalList = JSON.stringify(this.responseText);
       document.getElementById("wishes").innerHTML = GoalList;
 
       document.getElementById("conStatus").innerHTML = "More Goals, just press the button";
