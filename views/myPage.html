@@ -26,8 +26,7 @@
   div{
     border-width: 3px;
     boarder-color: black;
-    display: inline-block;
-    white-space: nowrap;
+
   }
 
   .navElement {
@@ -47,19 +46,30 @@
 
   }
 
+  .container {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  #biosection{
+    width: 66%;
+    height: 1000px;
+    background-color: yellow;
+  }
 
   #bio{
     border-width: 3px;
     boarder-color: black;
-    width: 66%;
-    height: 900px;
+    width: 100%;
+    height: 850px;
   }
 
   #timeline{
     border-width: 3px;
     boarder-color: black;
-    width: 66%;
+    width: 100%;
     height: 100px;
+    background-color:pink;
   }
 
   #plans{
@@ -87,14 +97,18 @@
   </div>
 
 
-<div class="">
-  <div id="bio">
-    <p>Hello, my name is Quinn Paterson and this is my website</p>
+<div class="container">
+
+  <div id = "biosection">
+    <div id="bio">
+      <p>Hello, my name is Quinn Paterson and this is my website</p>
+    </div>
+
+    <div id="timeline">
+      <p>Where I've Been</p>
+    </div>
   </div>
 
-  <div id="timeline">
-    <p>Where I've Been</p>
-  </div>
 
   <div id="plans">
     <div class="planSection">
