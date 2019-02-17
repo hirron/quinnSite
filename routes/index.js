@@ -5,25 +5,14 @@ var MongoClient = require('mongodb').MongoClient;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  res.render('mypage');
 });
 
 
-router.get('/Dad', function(req, res, next) {
-  res.render('index', { title: 'Dad' });
+router.get('/NewYears', function(req, res, next) {
+  res.render('newyears', { title: 'Dad' });
 });
 
-router.get('/Dee', function(req, res, next) {
-  res.render('index', { title: 'Dee' });
-});
-
-router.get('/Sam', function(req, res, next) {
-  res.render('index', { title: 'Sam' });
-});
-
-router.get('/Grandma', function(req, res, next) {
-  res.render('index', { title: 'Grandma' });
-});
 
 var uri = "mongodb+srv://quinn:2018@goals-9yjnu.mongodb.net/test?retryWrites=true"
 
