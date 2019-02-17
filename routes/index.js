@@ -13,6 +13,15 @@ router.get('/NewYears', function(req, res, next) {
   res.render('newyears', { title: 'Dad' });
 });
 
+router.get('/download/myResume', function(req, res){
+  res.render('resume')
+});
+
+router.get('/download/resume', function(req, res){
+  var file = __dirname + '/upload-folder/resume.pdf';
+  res.download(file); // Set disposition and send it.
+});
+
 
 var uri = "mongodb+srv://quinn:2018@goals-9yjnu.mongodb.net/test?retryWrites=true"
 
