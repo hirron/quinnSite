@@ -1,5 +1,4 @@
 var express = require('express');
-var express = require('public');
 
 var router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
