@@ -18,7 +18,7 @@ router.get('/download/myResume', function(req, res){
 });
 
 router.get('/download/resume', function(req, res){
-  var file = __dirname + '/upload-folder/resume.pdf';
+  var file = + './upload-folder/resume.pdf';
   res.download(file); // Set disposition and send it.
 });
 
