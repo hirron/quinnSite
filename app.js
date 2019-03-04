@@ -57,5 +57,5 @@ app.use(function(err, req, res, next) {
   });
 });
 
-
+global.appRoot = path.resolve(__dirname);
 module.exports = app;

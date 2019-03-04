@@ -1,6 +1,6 @@
 var express = require('express');
 var path = require('path');
-global.appRoot = path.resolve(__dirname);
+/*global.appRoot = 'D:/home/site/wwwroot'*/
 var router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
 
