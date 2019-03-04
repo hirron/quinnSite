@@ -20,7 +20,7 @@ router.get('/download/myResume', function(req, res){
 });
 
 router.get('/download/resume', function(req, res){
-  var file = appRoot + '/images/resume.pdf';
+  var file = appRoot + '/public/images/resume.pdf';
   res.download(file); // Set disposition and send it.
 });
 
