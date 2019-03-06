@@ -41,6 +41,14 @@ button {
 
 }
 
+.biotext {
+  font-size: 32px;
+  width: 66%;
+}
+
+.bioPictures {
+  width: 33%;
+}
 
 .questionIcon{
   font-size: 80px;
