@@ -39,6 +39,13 @@ button {
 
 }
 
+
+.questionIcon{
+  font-size: 40px;
+  font-weight: bold;
+  color: yellow;
+  text-align: center;
+}
 #bioContainer{
   width: 64.9%;
   height: 850px;
