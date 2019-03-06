@@ -1,8 +1,71 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+div{
+  border : 3px solid black;
 }
 
-a {
-  color: #00B7FF;
+body {
+      background-color: rgb(116, 157, 224, 0.5);
+      margin: auto;
+      }
+button {
+      height: 40px;
+      margin-top: 5px;
+      width: 200px;
+      font-size: 20px;
+      }
+
+.navElement {
+  background-color: rgb(116, 157, 224, 0.5);
+  width: 33.1%;
+  height: 100%;
+  margin-left: -5px;
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.planSection {
+  width : 100%;
+  height : 49.5%;
+  text-align: center;
+
+}
+
+.container {
+  display: inline-block;
+  white-space: nowrap;
+  width: 100%;
+
+}
+
+#bioContainer{
+  width: 64.9%;
+  height: 850px;
+
+  float: left;
+  background-color: rgb(116, 157, 224, 0.2);
+}
+
+#bio{
+  width: 100%;
+  height: 80%;
+}
+
+#timeline{
+  width: 100%;
+  height: 19%;
+}
+
+#plans{
+  width: 33.2%;
+  height: 850px;
+  background-color: rgb(116, 157, 224, 0.8);
+  float:left;
+}
+
+#navBar {
+  margin-top: -20px;
+  width : 100%;
+  height : 40px;
+  display: inline-block;
+  white-space: nowrap;
 }
