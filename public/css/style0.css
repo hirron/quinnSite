@@ -1,5 +1,5 @@
 div{
-
+  border : 3px solid black;
   word-wrap: break-word;
 }
 
@@ -28,7 +28,6 @@ button {
   width : 100%;
   height : 49.5%;
   text-align: center;
-  border : 3px solid black;
 
 }
 
@@ -62,28 +61,23 @@ button {
   color: yellow;
   text-align: center;
 }
-
-
 #bioContainer{
   width: 64.9%;
   height: 850px;
 
   float: left;
   background-color: rgb(116, 157, 224, 0.2);
-  border : 3px solid black;
 }
 
 #bio{
   width: 100%;
   height: 80%;
-  border : 3px solid black;
 }
 
 
 #timeline{
   width: 100%;
   height: 19%;
-    border : 3px solid black;
 }
 
 #plans{
@@ -91,7 +85,6 @@ button {
   height: 850px;
   background-color: rgb(116, 157, 224, 0.8);
   float:left;
-  border : 3px solid black;
 }
 
 #navBar {
@@ -100,5 +93,4 @@ button {
   height : 40px;
   display: inline-block;
   white-space: nowrap;
-  border : 3px solid black;
 }
