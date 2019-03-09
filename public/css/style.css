@@ -56,6 +56,10 @@ button {
   float: right;
 }
 
+.bioSection{
+  margin-top: 10px;
+}
+
 .questionIcon{
   font-size: 80px;
   font-weight: bold;
