@@ -41,13 +41,17 @@ button {
 }
 
 .biotext {
-  font-size: 32px;
-  height: 400px;
+  font-size: 26px;
+  height: 300px;
+  float: left;
+  width: 70%;
+  word-break: break-all;
+
 }
 
 .bioPictures {
   width: 250px;
-  height: 400px;
+  height: 300px;
   float: right;
 }
 
