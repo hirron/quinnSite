@@ -1,3 +1,8 @@
+p{
+  width: 100%;
+  word-wrap: break-word;
+}
+
 div{
 
   word-wrap: break-word;
@@ -43,7 +48,7 @@ button {
 
 .biotext {
   font-size: 26px;
-  height: 300px;
+  height: 100%;
   float: left;
   width: 70%;
   word-break: break-all;
@@ -52,11 +57,12 @@ button {
 
 .bioPictures {
   width: 250px;
-  height: 300px;
+  height: 100%;
   float: right;
 }
 
 .bioSection{
+  height: 200px;
   margin-top: 10px;
 }
 
