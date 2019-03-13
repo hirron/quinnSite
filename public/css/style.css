@@ -47,11 +47,12 @@ button {
 }
 
 .biotext {
-  font-size: 26px;
+  font-size: 140%;
   height: 100%;
   float: left;
   width: 70%;
   word-break: break-all;
+  margin-left: 5%;
 
 }
 
