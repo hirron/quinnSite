@@ -10,6 +10,10 @@ router.get('/', function(req, res, next) {
   res.render('mypage');
 });
 
+router.get('/home', function(req, res, next) {
+  res.render('mypage');
+});
+
 
 router.get('/NewYears', function(req, res, next) {
   res.render('newyears', { title: 'Dad' });
