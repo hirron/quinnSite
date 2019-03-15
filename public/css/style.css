@@ -18,6 +18,11 @@ button {
       width: 200px;
       font-size: 20px;
       }
+.textArea{
+  width: 95%;
+  text align: center;
+  word-wrap: break-word;
+}
 
 .navElement {
   background-color: rgb(116, 157, 224, 0.5);
