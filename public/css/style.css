@@ -1,6 +1,5 @@
 p{
   width: 100%;
-  word-wrap: break-word;
   white-space: normal;
 }
 
@@ -59,7 +58,6 @@ button {
   height: 100%;
   float: left;
   width: 55%;
-  word-break: break-all;
   margin-left: 5%;
 
 }
