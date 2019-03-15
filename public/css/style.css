@@ -1,6 +1,7 @@
 p{
   width: 100%;
   word-wrap: break-word;
+  white-space: normal;
 }
 
 div{
@@ -18,9 +19,11 @@ button {
       width: 200px;
       font-size: 20px;
       }
+
 .textArea{
   width: 95%;
   text align: center;
+  white-space: normal;
   word-wrap: break-word;
 }
 
