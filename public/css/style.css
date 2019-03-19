@@ -107,7 +107,7 @@ button {
 
 #plans{
   width: 33.2%;
-  height: 850px;
+  height: 100%;
   background-color: rgb(116, 157, 224, 0.8);
   float:left;
   border : 3px solid black;
