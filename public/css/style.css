@@ -41,6 +41,7 @@ button {
   height : 49.5%;
   text-align: center;
   border : 3px solid black;
+  overflow: hidden;
 
 }
 
