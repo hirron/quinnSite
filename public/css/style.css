@@ -28,7 +28,7 @@ button {
 
 .navElement {
   background-color: rgb(116, 157, 224, 0.5);
-  width: 24.7%;
+  width: 33.1%;
   height: 100%;
   margin-left: -5px;
   display: inline-block;
@@ -37,7 +37,7 @@ button {
 }
 
 .dropdown {
-  width: 24.7%;
+  width: 33.1%;
   height: 100%;
   margin-left: -5px;
   float: right;
@@ -144,5 +144,4 @@ button {
   display: inline-block;
   white-space: nowrap;
   border : 3px solid black;
-  overflow: hidden;
 }
