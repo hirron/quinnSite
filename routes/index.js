@@ -10,6 +10,14 @@ router.get('/', function(req, res, next) {
   res.render('mypage');
 });
 
+router.get('/trans', function(req, res, next) {
+  res.render('trans');
+});
+
+router.get('/dadsDay', function(req, res, next) {
+  res.render('dadsDay');
+});
+
 router.get('/home', function(req, res, next) {
   res.render('mypage');
 });

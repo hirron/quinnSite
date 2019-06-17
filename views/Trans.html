@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta property="og:image" content="/images/12.jpg" />
+    <title>1st Tranniversery</title>
+    <LINK href="/css/tstyle.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+    <h1 style="margin-left: 50%; font-size: 60px;">My Timeline</h1>
+
+
+    <div class="pin">
+      <div id = "addTimeline">
+        <div class="photoCard">
+          <img src="/images/pre.jpg" alt="1" height="100%" width="auto">
+        </div>
+
+      </div>
+      <button id = "addButton" type="button" name="button" onclick="nextPhoto()">+</button>
+    </div>
+
+    <div id = "middle">
+    </div>
+
+
+    <div class="pin">
+        <div class="photoCard" style="margin-left: 40%; margin-top:25px; width: 200px">
+          <img id = "photo1" src="/images/preeverything.jpg" alt="1" height="95%" width="auto">
+            <select id="select1" onchange="selectPhoto1()">
+              <option value="preeverything">1 Year Pre HRT</option>
+              <option value="pre">Pre HRT</option>
+              <option value="1">1 Month HRT</option>
+              <option value="2">2 Months HRT</option>
+              <option value="3">3 Months HRT</option>
+              <option value="4">4 Months HRT</option>
+              <option value="5">5 Months HRT</option>
+              <option value="6">6 Months HRT</option>
+              <option value="7">7 Months HRT</option>
+              <option value="8">8 Months HRT</option>
+              <option value="9">9 Months HRT</option>
+              <option value="10">10 Months HRT</option>
+              <option value="11">11 Months HRT</option>
+              <option value="12">12 Months HRT</option>
+              <option value="13">Full Body</option>
+            </select>
+        </div>
+
+
+        <div class="photoCard" style="margin-left:-25px; margin-top:25px;  width: 200px">
+          <img src="/images/12.jpg" id = "photo2" alt="1" height="95%" width="auto">
+            <select id="select2" onchange="selectPhoto2()" selected="1">
+              <option value="preeverything">1 Year Pre HRT</option>
+              <option value="pre">Pre HRT</option>
+              <option value="1">1 Month HRT</option>
+              <option value="2">2 Months HRT</option>
+              <option value="3">3 Months HRT</option>
+              <option value="4">4 Months HRT</option>
+              <option value="5">5 Months HRT</option>
+              <option value="6">6 Months HRT</option>
+              <option value="7">7 Months HRT</option>
+              <option value="8">8 Months HRT</option>
+              <option value="9">9 Months HRT</option>
+              <option value="10">10 Months HRT</option>
+              <option value="11">11 Months HRT</option>
+              <option value="12">12 Months HRT</option>
+              <option value="13">Full Body</option>
+            </select>
+        </div>
+    </div>
+
+    <div style="height:150px; width 100%">
+
+    </div>
+
+  </body>
+
+
+</html>
+
+
+
+
+<script>
+
+
+</script>
+
+<script type="text/javascript">
+  var index = 1;
+  document.getElementById("select2").value="12";
+
+  function selectPhoto1(){
+    var photo = document.getElementById("photo1");
+    photo.src= "/images/"+document.getElementById("select1").value+".jpg"
+  }
+
+  function selectPhoto2(){
+    var photo = document.getElementById("photo2");
+    photo.src= "/images/"+document.getElementById("select2").value+".jpg"
+  }
+
+  function nextPhoto(){
+
+    if (index < 13){
+      var nextCard = document.createElement("div");
+      nextCard.classList.add("photoCard");
+
+      var nextimg = document.createElement("img");
+      nextimg.src = "/images/"+index.toString()+".jpg";
+      nextimg.style.height = "100%";
+      nextimg.style.width = "auto";
+
+
+      var timeline = document.getElementById("addTimeline");
+
+      nextCard.appendChild(nextimg);
+      timeline.appendChild(nextCard);
+      index = index+1;
+      timeline.scrollLeft = 400*index;
+    }
+}
+
+</script>
