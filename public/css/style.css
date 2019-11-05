@@ -19,6 +19,14 @@ button {
       font-size: 20px;
       }
 
+.blogPost{
+  width:60%;
+  margin:auto;
+  border: solid;
+  margin-top: 30px;
+  padding: 25px;
+}
+
 .textArea{
   width: 95%;
   text align: center;

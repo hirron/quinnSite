@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<head>
+
+ <title>Welcome to my website</title>
+
+
+<LINK href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body >
+  <div id = "navBar">
+    <div class="navElement">
+      <a  href="#">About Me</a>
+    </div>
+    <div class="navElement">
+      <a  href="/download/myResume">My Resume</a>
+    </div>
+    <div class="dropdown navElement">
+      My Apps
+     <div class="dropdown-content">
+       <a href="/NewYears">New Years App</a>
+       <a href="#">Link 2</a>
+       <a href="#">Link 3</a>
+     </div>
+   </div>
+  </div>
+
+
+  <div class="container">
+    <div class="">
+        <h1 style ="text-align: center">Unity Data Processing Project</h1>
+    </div>
+
+    <div class="blogPost">
+        <h1>Project Update: Nov 5</h1>
+        <p>
+          <b>– on the proposal and website</b><br>
+          Thus far I've had no issues with finding relevent information and am happy with the scope of my project; similarily
+          I feel that I'm okay served with current website selection; may try to add some improvements<br><br>
+          <b>– on the progresses with regard to the schedule</b><br>
+          Currently running about a week or so behind; intend to catch up this week with report hopefully in finished / edit state by Monday 11
+          Have not yet started work on technical demo.<br><br>
+
+          <b>– technical challenges met, solved and remaining</b><br>
+            I've met the goal of planning out the demo game; essentially a particle collision game with the goal of being easy to code but computationally heavy
+            (lots of collitions, dyamic rendering etc); the caveat to this being however long it takes to implement said game (ideally easy and quick) thus far unresolved<br><br>
+
+          <b>– additional help needed if any</b><br>
+            Might be nice to get some more guidelines on tone (casual in the style of tech magazine or academic),
+            focus (etc applying principles learned in class vs demostrating use of principles in system)<br><br>
+
+          <b>– adjustment requested to the proposal</b><br>
+            Currently content with proposal, with adjusted schedule. Potential adjustment may occur on technical demo with possibility of taking an existing demo from elsewhere
+            and observing how it could be optimized as opposed to developing game; depends on technical progress.<br><br>
+
+          <b>– anything else needs to be updated</b><br>
+          nothing for the moment
+         </p>
+
+    </div>
+
+
+
+
+    <div class="blogPost">
+        <h1>Why Game Engines?</h1>
+        <p>Where’s the money?
+          Video games are a 150 billion dollar global industry, exceeding the 136 billion
+          dollar film industry. In order to facilitate the production of
+          new games a game engine is used to accelerate development by providing a bunch
+          of commonly necessary systems such as object logic, camera logic, audio logic and more. <br><br>
+
+          Why Unity?<br>
+          Unity is a popular engine used for development, part of the reason is accessibility; anyone with an internet connection
+           and suitable computer can download it online for free. It has a wide variety of features for development that would
+           otherwise potentially take a long time to replicate in house, and due to its wide audience it can generally cover
+           whatever specific concerns a developer may have. Additionally all of these features have been subject
+           to some level of optimization which means less time doing performance optimization <br><br>
+
+          Why Optimize?<br>
+          Optimization is important in the field of video game development.
+          The more systems are able to suitably run your system the larger your potential playerbase.
+           As games are multimedia products there’s often a wide variety of demands on the system running them,
+           and thus opportunity and value in optimizing them. <br>
+         </p>
+
+    </div>
+
+
+    <div class="blogPost">
+    	<h1> Graphics Optimization </h1>
+      <p>
+      		Video games can offer spectacular visual experiences, however to do so requires navigating around
+      		a number of issues involving computational complexity; frames are generated as opposed to provided
+      		which can lead to a number of difficulties. Graphics cards are common expressly for the purpose of
+      		making this process more efficient, yet still graphics often remain a bottleneck for newer games.
+      		So, what does Unity do to alleviate this?<br><br>
+
+
+      		Frame generation is handled by "draw" calls; this renders the object and it's properties onto the screen
+      		and must be called for every "frame" this can understandably be quite consuming as more and more objects appear on the screen.
+      		A way of helping to optimize this is to not have to redraw an unchanging object such as navigation. Similarly because
+      		navigation is unlikely to change it doesn't really need calculations for dynamic lighting, sizing etc.<br><br>
+
+      		To save computation effort Unity allows objects to be considered static; these will be maintained as is from frame to frame
+      		and will no longer be able to scale, rotate or move. This saves effort and allows resources to be focused on objects that do
+      		need these characteristics<br><br>
+
+      		Additionally, not every object needs to be rendered as if from a blank screen, similar objects can be grouped together and drawn
+      		as one object effectively reducing the need to replicate calculations and switching location focuses.<br><br>
+
+      		Because games are often 3d environments objects will be hidden / distant / obscured, Unity takes advantage of this
+      		by given the option to render distant / obscured objects at a lower resolution, thus saving computational resources.<br><br>
+
+      		While these are just some of the optimizations available in Unity it's possible to see the pattern of taking advantage of limitations
+      		unique to video games and discarding information where possible. This resembles some of the techniques used in audio and image compression
+      		in that you can use lossy compression without deteriorating the multimedia experience.
+    	</p>
+    </div>
+
+
+    <div class="blogPost">
+    	<h1> Logic Optimization </h1>
+      	<p>
+      		Video games have the unique source of resource consumption that is game logic; if you want something to be
+      		interactive then you need calculations to produce it. As systems grow and become more complex game logic can
+      		be a serious bottleneck for resources. To address this Unity offers a few tools for optimizing game logic<br><br>
+
+
+      		First and foremost of these is the ability to profile game performance. Unlike something such as image compression where data usage is
+      		easily measurable (ex going from 2mb to 1mb storage space) video game logic is dynamic and may spike at different times. The profiler
+      		can be used to help identify what and where gamelogic, as well as graphical and audio functions are running into issues.<br><br>
+
+
+      		One common source of resource usage is in physics. In an FPS type game there may be thousands of "bullets" that all must be tracked, updated
+      		and any collision detected. This latter bit; detecting other things on relation to current object can become very expensive as areas grow larger
+      		and more elements are introduced. Some solutions to minimize this burden include limiting the range at which the engine attempts to perform computations,
+      		or in the case of linier motion braking the game environment into layers that are more easy to search through at a computational level.<br><br>
+
+
+      	</p>
+    </div>
+
+  </div>
+</body>
+
+<script type="text/javascript">
+
+
+</script>

@@ -14,6 +14,10 @@ router.get('/trans', function(req, res, next) {
   res.render('trans');
 });
 
+router.get('/UnityBlog', function(req, res, next) {
+  res.render('unityblog');
+});
+
 router.get('/dadsDay', function(req, res, next) {
   res.render('dadsDay');
 });
@@ -26,6 +30,8 @@ router.get('/home', function(req, res, next) {
 router.get('/NewYears', function(req, res, next) {
   res.render('newyears', { title: 'Dad' });
 });
+
+
 
 router.get('/download/myResume', function(req, res){
   res.render('resume')
